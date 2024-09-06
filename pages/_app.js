@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
 import Transition from "../components/Transition";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
           <Transition />
           <Component {...pageProps} />
           <GoogleTagManager gtmId="GTM-KGKBMJND" />
+          <GoogleAnalytics gaId="G-XFYGCYCQMS" />
         </motion.div>
       </AnimatePresence>
     </Layout>
