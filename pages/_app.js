@@ -14,8 +14,8 @@ function MyApp({ Component, pageProps }) {
         <motion.div key={router.route} className="h-full">
           <Transition />
           <Component {...pageProps} />
-          <GoogleTagManager gtmId="GTM-KGKBMJND" />
-          <GoogleAnalytics gaId="G-XFYGCYCQMS" />
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         </motion.div>
       </AnimatePresence>
     </Layout>
